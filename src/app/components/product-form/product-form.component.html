@@ -1,0 +1,57 @@
+<form [formGroup]="productForm" (ngSubmit)="handleSubmit()">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      formControlName="name"
+    />
+    @if(name?.touched && name?.hasError('required')) {
+    <small class="text-danger">Required</small>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">image</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputPassword1"
+      formControlName="image"
+    />
+    @if(image?.touched && image?.hasError('required')) {
+    <small class="text-danger">Required</small>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">quantity</label>
+    <input
+      type="number"
+      class="form-control"
+      id="exampleInputPassword1"
+      formControlName="quantity"
+    />
+    @if(quantity?.touched && quantity?.hasError('required')) {
+    <small class="text-danger">Required</small>
+    } @if(quantity?.touched && quantity?.hasError('min')) {
+    <small class="text-danger">min > 2</small>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">category</label>
+    <select
+      class="form-select"
+      aria-label="Default select example"
+      formControlName="category"
+    >
+      <option selected>Open this select menu</option>
+      <option value="Comics">Comics</option>
+      <option value="Legen">Legen</option>
+    </select>
+    @if(category?.touched && category?.hasError('required')) {
+    <small class="text-danger">Required</small>
+    }
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,4 +1,15 @@
 {
   "products": [],
-  "users": []
+  "users": [
+    {
+      "email": "email@gmail.com",
+      "password": "$2a$10$HIG4l1fndlxZ.EPB.dIk3ecy9BA8fYV0N.VrsAkUO2uOminhbYmyy",
+      "id": 1
+    },
+    {
+      "email": "email2@gmail.com",
+      "password": "$2a$10$4rQUYIlvWh.Mn/5f9jaFc.UTJALjoRWGYz7znF/UZ8umtyAbTgJrW",
+      "id": 2
+    }
+  ]
 }
