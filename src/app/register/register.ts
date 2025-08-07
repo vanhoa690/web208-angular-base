@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ProductService } from '../product.service';
-import { AuthService } from '../auth.service';
+import { Service } from '../service';
 
 @Component({
   selector: 'app-register',
@@ -10,18 +9,18 @@ import { AuthService } from '../auth.service';
   styleUrl: './register.scss',
 })
 export class Register {
-  registerForm: FormGroup;
+  form: FormGroup;
 
-  constructor(private fb: FormBuilder, private authService: AuthService) {
-    this.registerForm = this.fb.group({
+  constructor(private fb: FormBuilder, private service: Service) {
+    this.form = this.fb.group({
       email: [''],
       password: [''],
     });
   }
 
   onSubmit() {
-    console.log(this.registerForm.value);
-    this.authService.registerUser(this.registerForm.value).subscribe({
+    console.log(this.form.value);
+    this.service.login(this.form.value).subscribe({
       next: () => {},
     });
   }

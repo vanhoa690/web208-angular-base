@@ -1,10 +1,37 @@
 {
-  "products": [],
-  "users": [
+  "events": [
     {
-      "email": "sdfs@gmail.com",
-      "password": "$2a$10$7CkIe23j1ZK0AFzgFRFST.cqisn8jvL77a/7h6.igPqXLcCcTnVrC",
-      "id": 1
+      "id": 1,
+      "name": "React Workshop",
+      "type": "upcoming ",
+      "note": "Learn the basics of React and build a small app.",
+      "dateStart": "2025-08-10",
+      "category": "workshop"
+    },
+    {
+      "id": 2,
+      "name": "AI Seminar 2025",
+      "type": "ongoing",
+      "note": "Exploring AI trends and applications.",
+      "dateStart": "2025-07-01",
+      "category": "seminar"
+    },
+    {
+      "id": 3,
+      "name": "Movie Night Event",
+      "type": "ended",
+      "note": "Screening of classic sci-fi films.",
+      "dateStart": "2025-06-15",
+      "category": "movie"
+    },
+    {
+      "name": "1",
+      "type": "ongoing",
+      "note": "1",
+      "dateStart": "2025-08-07",
+      "category": "workshop",
+      "id": 4
     }
-  ]
+  ],
+  "users": []
 }

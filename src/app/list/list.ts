@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
-import { ProductService } from '../product.service';
+import { Service } from '../service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-list',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './list.html',
   styleUrl: './list.scss',
 })
 export class List {
-  constructor(private productService: ProductService) {}
-
+  constructor(private service: Service) {}
+  items: any = [];
   ngOnInit() {
-    this.productService.getAll().subscribe({
-      next: (data) => {
+    this.service.getAll().subscribe({
+      next: (data: any) => {
         console.log(data);
+        this.items = data;
       },
     });
   }
