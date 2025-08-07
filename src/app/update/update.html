@@ -1,0 +1,100 @@
+<p>update works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      formControlName="name"
+    />
+    @if (name?.invalid && name?.touched && name?.hasError('required')) {
+    <div>Name is required.</div>
+    } @if (name?.invalid && name?.touched && name?.hasError('minlength')) {
+    <div>Name min 5.</div>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">note</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      formControlName="note"
+    />
+    @if (note?.invalid && note?.touched && note?.hasError('required')) {
+    <div>note is required.</div>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">dateStart</label>
+    <input
+      type="date"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      formControlName="dateStart"
+    />
+    @if (dateStart?.invalid && dateStart?.touched &&
+    dateStart?.hasError('required')) {
+    <div>dateStart is required.</div>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">category</label>
+    <select
+      class="form-select"
+      aria-label="Default select example"
+      formControlName="category"
+    >
+      <option selected>Open this select menu</option>
+      <option value="workshop">workshop</option>
+      <option value="seminar">seminar</option>
+      <option value="movie">movie</option>
+    </select>
+    @if (category?.invalid && category?.touched &&
+    category?.hasError('required')) {
+    <div>category is required.</div>
+    }
+  </div>
+
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="type"
+      id="radioDefault2"
+      value="ended"
+      formControlName="type"
+    />
+    <label class="form-check-label" for="radioDefault2"> ended </label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="type"
+      id="radioDefault2"
+      value="upcoming"
+      formControlName="type"
+    />
+    <label class="form-check-label" for="radioDefault2"> upcoming </label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="type"
+      id="radioDefault2"
+      value="ongoing"
+      formControlName="type"
+    />
+    <label class="form-check-label" for="radioDefault2"> upcoming </label>
+  </div>
+  @if (type?.invalid && type?.touched && type?.hasError('required')) {
+  <div>type is required.</div>
+  }
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

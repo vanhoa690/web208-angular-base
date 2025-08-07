@@ -1,4 +1,51 @@
 {
-  "products": [],
-  "users": []
+  "events": [
+    {
+      "name": "React Workshop update",
+      "type": "upcoming ",
+      "category": "workshop",
+      "note": "Learn the basics of React and build a small app.",
+      "dateStart": "2025-08-10",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "AI Seminar 2025",
+      "type": "ongoing",
+      "note": "Exploring AI trends and applications.",
+      "dateStart": "2025-07-01",
+      "category": "seminar"
+    },
+    {
+      "name": "su kien",
+      "type": "",
+      "category": "",
+      "note": "",
+      "dateStart": "",
+      "id": 3
+    },
+    {
+      "name": "1",
+      "type": "ended",
+      "category": "workshop",
+      "note": "2",
+      "dateStart": "2025-08-08",
+      "id": 4
+    },
+    {
+      "name": "234234",
+      "type": "upcoming",
+      "category": "workshop",
+      "note": "234234",
+      "dateStart": "2025-08-08",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "email": "email@gmail.com",
+      "password": "$2a$10$f91s927Izmnzbqzeay4dL./.3Ycrnj02DiTa.D.7Gkj41LqmwH/DG",
+      "id": 1
+    }
+  ]
 }
