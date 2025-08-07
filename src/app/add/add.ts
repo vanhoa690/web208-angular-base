@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { Service } from '../service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-add',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './add.html',
   styleUrl: './add.scss',
 })
@@ -13,11 +19,11 @@ export class Add {
 
   constructor(private fb: FormBuilder, private service: Service) {
     this.form = this.fb.group({
-      name: [''],
-      type: [''],
-      note: [''],
-      dateStart: [''],
-      category: [''],
+      name: ['', [Validators.required]],
+      type: ['', [Validators.required]],
+      note: ['', [Validators.required]],
+      dateStart: ['', [Validators.required]],
+      category: ['', [Validators.required]],
     });
   }
 

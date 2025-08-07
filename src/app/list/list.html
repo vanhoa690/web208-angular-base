@@ -11,12 +11,18 @@
   </thead>
   <tbody>
     <tr *ngFor="let item of items">
-      <th scope="row">{{ item.id }}</th>
+      <th scope="row">
+        {{ item.id }}
+      </th>
       <td>{{ item.name }}</td>
       <td>{{ item.type }}</td>
       <td>{{ item.note }}</td>
       <td>{{ item.dateStart }}</td>
       <td>{{ item.category }}</td>
+      <td>
+        <a [routerLink]="['update', item.id]">Update</a>
+        <button (click)="onDelete(item.id)">delete</button>
+      </td>
     </tr>
   </tbody>
 </table>

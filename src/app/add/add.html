@@ -8,6 +8,12 @@
       aria-describedby="emailHelp"
       formControlName="name"
     />
+    <div
+      *ngIf="form.get('name')?.invalid && form.get('name')?.touched && form.get('name')?.errors?.['required']"
+      class="invalid-feedback"
+    >
+      name is required.
+    </div>
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">type</label>
