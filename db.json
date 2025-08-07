@@ -1,4 +1,10 @@
 {
   "products": [],
-  "users": []
+  "users": [
+    {
+      "email": "sdfs@gmail.com",
+      "password": "$2a$10$7CkIe23j1ZK0AFzgFRFST.cqisn8jvL77a/7h6.igPqXLcCcTnVrC",
+      "id": 1
+    }
+  ]
 }
