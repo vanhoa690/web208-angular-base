@@ -25,8 +25,18 @@ export class ListPage {
   };
   ngOnInit() {
     this.loadBooks();
-    this.bookService.reload$.subscribe(() => {
+    this.bookService.reload.subscribe(() => {
       this.loadBooks();
     });
   }
+
+  deleteBook = (id: number) => {
+    // ko dung filter
+    this.http.delete('http://localhost:3000/books/' + id).subscribe({
+      next: () => {
+        // this.books = this.books.filter((item) => item.id !== id);
+        this.loadBooks();
+      },
+    });
+  };
 }

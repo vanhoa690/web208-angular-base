@@ -5,7 +5,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class BookService {
-  reload$ = new Subject<void>();
+  reload = new Subject<void>();
 }
 
 // query client => query key
