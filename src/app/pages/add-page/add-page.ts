@@ -28,7 +28,7 @@ export class AddPage {
     this.http.post('http://localhost:3000/books', this.form.value).subscribe({
       next: () => {
         alert('them thanh cong');
-        this.bookService.triggerRefresh();
+        this.bookService.reload;
       },
     });
   };

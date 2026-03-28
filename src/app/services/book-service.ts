@@ -5,13 +5,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class BookService {
-  private refresh = new Subject<void>();
-
-  refresh$ = this.refresh.asObservable();
-
-  triggerRefresh() {
-    this.refresh.next();
-  }
+  reload$ = new Subject<void>();
 }
 
 // query client => query key

@@ -25,7 +25,7 @@ export class ListPage {
   };
   ngOnInit() {
     this.loadBooks();
-    this.bookService.refresh$.subscribe(() => {
+    this.bookService.reload$.subscribe(() => {
       this.loadBooks();
     });
   }
