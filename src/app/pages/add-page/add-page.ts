@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { BookService } from '../../services/book-service';
 
 @Component({
   selector: 'app-add-page',
@@ -15,6 +16,7 @@ export class AddPage {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
+    private bookService: BookService,
   ) {
     this.form = this.fb.group({
       title: '',
@@ -26,6 +28,7 @@ export class AddPage {
     this.http.post('http://localhost:3000/books', this.form.value).subscribe({
       next: () => {
         alert('them thanh cong');
+        this.bookService.triggerRefresh();
       },
     });
   };
